@@ -3,7 +3,7 @@
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	2
+Release:	3
 
 Summary:	Ensure that your Makefile.PL specifies all module dependencies
 License:	GPL+ or Artistic
