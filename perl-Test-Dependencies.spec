@@ -1,15 +1,15 @@
 %define upstream_name    Test-Dependencies
-%define upstream_version 0.12
+%define upstream_version 0.34
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	4
+Version:	%{upstream_version}
+Release:	1
 
 Summary:	Ensure that your Makefile.PL specifies all module dependencies
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/Test/%{upstream_name}-%{upstream_version}.tar.gz
+Url:		https://github.com/ehuelsmann/perl-Test-Dependencies
+Source0:	https://cpan.metacpan.org/authors/id/E/EH/EHUELS/Test-Dependencies-%{upstream_version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
