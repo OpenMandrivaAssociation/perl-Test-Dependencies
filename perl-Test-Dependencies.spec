@@ -1,15 +1,13 @@
 %define upstream_name    Test-Dependencies
-%define upstream_version 0.34
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	1
+Version:	0.34
+Release:	2
 
 Summary:	Ensure that your Makefile.PL specifies all module dependencies
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://github.com/ehuelsmann/perl-Test-Dependencies
-Source0:	https://cpan.metacpan.org/authors/id/E/EH/EHUELS/Test-Dependencies-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/E/EH/EHUELS/Test-Dependencies-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -29,7 +27,7 @@ Makes sure that all of the modules that are 'use'd are listed in the
 Makefile.PL as dependencies.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
@@ -54,9 +52,7 @@ make test
 
 * Sat Aug 01 2009 Jérôme Quelin <jquelin@mandriva.org> 0.110.0-1mdv2010.0
 + Revision: 405548
-- rebuild using %%perl_convert_version
-
-* Fri Aug 08 2008 Thierry Vignaud <tv@mandriva.org> 0.11-2mdv2009.0
+- rebuild using %0.34 Fri Aug 08 2008 Thierry Vignaud <tv@mandriva.org> 0.11-2mdv2009.0
 + Revision: 268732
 - rebuild early 2009.0 package (before pixel changes)
 
